@@ -1,2 +1,5 @@
-export { default as ScaledSheet } from './lib/ScaledSheet';
-export { moderateScale, scale, verticalScale } from './lib/scalingUtils';
+import scaledSheetCreator from './lib/ScaledSheet';
+import { scale, verticalScale, moderateScale } from './lib/scaling-utils';
+
+export const ScaledSheet = scaledSheetCreator(scale, verticalScale, moderateScale);
+export * from './lib/scaling-utils';
